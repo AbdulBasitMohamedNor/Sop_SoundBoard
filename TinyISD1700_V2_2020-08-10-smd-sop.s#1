@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -6066,12 +6067,6 @@ chip</description>
 <pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
-<symbol name="5V">
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP" prefix="C" uservalue="yes">
@@ -6326,18 +6321,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 </device>
 </devices>
 </deviceset>
-<deviceset name="5V">
-<gates>
-<gate name="G$1" symbol="5V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -6418,82 +6401,134 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="C5" library="SparkFun2" deviceset="CAP_POL" device="1206"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="U$6" library="SparkFun2" deviceset="5V" device="" value="9V"/>
-<part name="U$1" library="SparkFun2" deviceset="5V" device="" value="9V"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="GND1" gate="1" x="5.08" y="20.32" rot="MR0"/>
-<instance part="GND2" gate="1" x="165.1" y="20.32" rot="MR0"/>
-<instance part="80OHM" gate="G$1" x="99.06" y="38.1">
+<instance part="GND1" gate="1" x="5.08" y="20.32" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="7.62" y="17.78" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="GND2" gate="1" x="165.1" y="20.32" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="167.64" y="17.78" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="80OHM" gate="G$1" x="99.06" y="38.1" smashed="yes">
 <attribute name="OC_FARNELL" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="95.25" y="39.5986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="95.25" y="34.798" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="VCC" x="142.24" y="88.9"/>
-<instance part="C2" gate="G$1" x="152.4" y="58.42" rot="R90">
+<instance part="P+1" gate="VCC" x="142.24" y="88.9" smashed="yes">
+<attribute name="VALUE" x="139.7" y="86.36" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C2" gate="G$1" x="152.4" y="58.42" smashed="yes" rot="R90">
 <attribute name="OC_FARNELL" x="152.4" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="152.4" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="152.4" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="151.765" y="59.436" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="156.591" y="59.436" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C3" gate="G$1" x="99.06" y="33.02" rot="R270">
+<instance part="C3" gate="G$1" x="99.06" y="33.02" smashed="yes" rot="R270">
 <attribute name="OC_FARNELL" x="99.06" y="33.02" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="99.06" y="33.02" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="99.06" y="33.02" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="99.695" y="32.004" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="94.869" y="32.004" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="P+2" gate="VCC" x="12.7" y="48.26"/>
-<instance part="U$2" gate="G$1" x="137.16" y="12.7" rot="MR90">
+<instance part="P+2" gate="VCC" x="12.7" y="48.26" smashed="yes">
+<attribute name="VALUE" x="10.16" y="45.72" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="U$2" gate="G$1" x="137.16" y="12.7" smashed="yes" rot="MR90">
 <attribute name="OC_FARNELL" x="137.16" y="12.7" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="137.16" y="12.7" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="137.16" y="12.7" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="150.622" y="7.62" size="1.27" layer="95" rot="MR90"/>
 </instance>
-<instance part="GND4" gate="1" x="91.44" y="20.32" rot="MR0"/>
-<instance part="U$3" gate="G$1" x="83.82" y="71.12" rot="R180">
+<instance part="GND4" gate="1" x="91.44" y="20.32" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="93.98" y="17.78" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="U$3" gate="G$1" x="83.82" y="71.12" smashed="yes" rot="R180">
 <attribute name="OC_FARNELL" x="83.82" y="71.12" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="83.82" y="71.12" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="83.82" y="71.12" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="88.9" y="57.658" size="1.27" layer="95" rot="R180"/>
 </instance>
-<instance part="U$5" gate="G$1" x="81.28" y="40.64" rot="R180">
+<instance part="U$5" gate="G$1" x="81.28" y="40.64" smashed="yes" rot="R180">
 <attribute name="OC_FARNELL" x="81.28" y="40.64" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="81.28" y="40.64" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="81.28" y="40.64" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="86.36" y="27.178" size="1.27" layer="95" rot="R180"/>
 </instance>
-<instance part="X2" gate="-1" x="152.4" y="27.94" rot="R90"/>
-<instance part="X2" gate="-2" x="157.48" y="27.94" rot="R90"/>
-<instance part="X3" gate="-1" x="40.64" y="111.76" rot="MR180"/>
-<instance part="X3" gate="-2" x="40.64" y="119.38" rot="MR180"/>
+<instance part="X2" gate="-1" x="152.4" y="27.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="151.511" y="27.94" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="X2" gate="-2" x="157.48" y="27.94" smashed="yes" rot="R90">
+<attribute name="VALUE" x="161.163" y="25.4" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="156.591" y="27.94" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="X3" gate="-1" x="40.64" y="111.76" smashed="yes" rot="MR180">
+<attribute name="NAME" x="40.64" y="110.871" size="1.778" layer="95" rot="MR0"/>
+</instance>
+<instance part="X3" gate="-2" x="40.64" y="119.38" smashed="yes" rot="MR180">
+<attribute name="VALUE" x="38.1" y="123.063" size="1.778" layer="96" rot="MR180"/>
+<attribute name="NAME" x="40.64" y="118.491" size="1.778" layer="95" rot="MR0"/>
+</instance>
 <instance part="80OHM1" gate="G$1" x="157.48" y="43.18" smashed="yes" rot="R90">
 <attribute name="VALUE" x="155.702" y="36.83" size="1.778" layer="96" rot="R90"/>
 <attribute name="OC_FARNELL" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="C4" gate="G$1" x="142.24" y="38.1">
+<instance part="C4" gate="G$1" x="142.24" y="38.1" smashed="yes">
 <attribute name="OC_FARNELL" x="142.24" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="142.24" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="142.24" y="38.1" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="143.256" y="38.735" size="1.778" layer="95"/>
+<attribute name="VALUE" x="143.256" y="33.909" size="1.778" layer="96"/>
 </instance>
-<instance part="U$4" gate="G$1" x="127" y="58.42">
+<instance part="U$4" gate="G$1" x="127" y="58.42" smashed="yes">
 <attribute name="OC_FARNELL" x="127" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="127" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="127" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="VALUE" x="112.014" y="27.94" size="1.27" layer="96"/>
+<attribute name="NAME" x="111.76" y="86.36" size="1.27" layer="95"/>
 </instance>
-<instance part="U1" gate="A" x="33.02" y="60.96">
+<instance part="U1" gate="A" x="33.02" y="60.96" smashed="yes">
 <attribute name="MF" x="33.02" y="60.96" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="40.4876" y="30.5816" size="2.0828" layer="95" ratio="10" rot="SR180"/>
+<attribute name="VALUE" x="29.2354" y="28.448" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="IC1" gate="G$1" x="101.6" y="119.38"/>
-<instance part="C6" gate="G$1" x="86.36" y="106.68"/>
-<instance part="R1" gate="G$1" x="101.6" y="99.06" rot="R90"/>
-<instance part="R2" gate="G$1" x="114.3" y="111.76" rot="R90"/>
-<instance part="GND3" gate="1" x="101.6" y="91.44" rot="MR0"/>
-<instance part="P+3" gate="VCC" x="134.62" y="119.38" rot="R270"/>
-<instance part="C5" gate="G$1" x="127" y="109.22"/>
-<instance part="GND5" gate="1" x="53.34" y="111.76" rot="MR270"/>
-<instance part="U$6" gate="G$1" x="86.36" y="119.38" rot="R90"/>
-<instance part="U$1" gate="G$1" x="50.8" y="119.38" rot="R270"/>
+<instance part="IC1" gate="G$1" x="101.6" y="119.38" smashed="yes">
+<attribute name="NAME" x="93.98" y="125.095" size="1.778" layer="95" ratio="10"/>
+<attribute name="VALUE" x="96.52" y="121.92" size="1.778" layer="96" ratio="10"/>
+</instance>
+<instance part="C6" gate="G$1" x="86.36" y="106.68" smashed="yes">
+<attribute name="NAME" x="87.884" y="109.601" size="1.778" layer="95"/>
+<attribute name="VALUE" x="87.884" y="104.521" size="1.778" layer="96"/>
+</instance>
+<instance part="R1" gate="G$1" x="101.6" y="99.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="100.1014" y="95.25" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="104.902" y="95.25" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R2" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="112.8014" y="107.95" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="117.602" y="107.95" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND3" gate="1" x="101.6" y="91.44" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="104.14" y="88.9" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="P+3" gate="VCC" x="134.62" y="119.38" smashed="yes" rot="R270">
+<attribute name="VALUE" x="132.08" y="121.92" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="127" y="109.22" smashed="yes">
+<attribute name="NAME" x="128.016" y="109.855" size="1.778" layer="95"/>
+<attribute name="VALUE" x="128.016" y="105.029" size="1.778" layer="96"/>
+</instance>
+<instance part="GND5" gate="1" x="53.34" y="111.76" smashed="yes" rot="MR270">
+<attribute name="VALUE" x="55.88" y="114.3" size="1.778" layer="96" rot="MR270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -6828,19 +6863,14 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <junction x="101.6" y="106.68"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="N$28" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="111.76" x2="86.36" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="VIN"/>
 <wire x1="86.36" y1="119.38" x2="88.9" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="U$6" gate="G$1" pin="5V"/>
-<junction x="86.36" y="119.38"/>
-</segment>
-<segment>
 <pinref part="X3" gate="-2" pin="KL"/>
-<pinref part="U$1" gate="G$1" pin="5V"/>
-<wire x1="50.8" y1="119.38" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="119.38" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
