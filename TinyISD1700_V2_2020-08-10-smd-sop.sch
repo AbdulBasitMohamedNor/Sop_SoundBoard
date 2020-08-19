@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -6530,12 +6531,12 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <part name="U1" library="Atmel_By_element14_Batch_1-00" deviceset="ATTINY4313-SU" device="">
 <attribute name="MF" value="MICROCHIP"/>
 </part>
-<part name="C6" library="SparkFun2" deviceset="CAP" device="0805"/>
-<part name="R1" library="SparkFun2" deviceset="RESISTOR" device=""/>
-<part name="R2" library="SparkFun2" deviceset="RESISTOR" device=""/>
+<part name="C6" library="SparkFun2" deviceset="CAP" device="0805" value="0.1uF"/>
+<part name="R2" library="SparkFun2" deviceset="RESISTOR" device="" value="340OHM"/>
+<part name="R1" library="SparkFun2" deviceset="RESISTOR" device="" value="240OHM"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="C5" library="SparkFun2" deviceset="CAP_POL" device="1206"/>
+<part name="C5" library="SparkFun2" deviceset="CAP_POL" device="1206" value="1uF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="IC3" library="v-reg" deviceset="LM317?*" device="" technology="MDT"/>
 <part name="U$1" library="arduino" deviceset="8PIN_HEADER" device="">
@@ -6646,12 +6647,12 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <attribute name="NAME" x="87.884" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="87.884" y="104.521" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="101.6" y="99.06" smashed="yes" rot="R90">
+<instance part="R2" gate="G$1" x="101.6" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.1014" y="95.25" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="104.902" y="95.25" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
-<attribute name="NAME" x="112.8014" y="107.95" size="1.778" layer="95" rot="R90"/>
+<instance part="R1" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="112.8014" y="110.49" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="117.602" y="107.95" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND3" gate="1" x="101.6" y="91.44" smashed="yes" rot="MR0">
@@ -6667,7 +6668,10 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <instance part="GND5" gate="1" x="53.34" y="111.76" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="55.88" y="114.3" size="1.778" layer="96" rot="MR270"/>
 </instance>
-<instance part="IC3" gate="G$1" x="101.6" y="119.38"/>
+<instance part="IC3" gate="G$1" x="101.6" y="119.38" smashed="yes">
+<attribute name="NAME" x="88.9" y="121.92" size="1.778" layer="95"/>
+<attribute name="VALUE" x="93.98" y="121.92" size="1.778" layer="96"/>
+</instance>
 <instance part="U$1" gate="G$1" x="139.7" y="22.86" smashed="yes" rot="MR270">
 <attribute name="OC_FARNELL" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="MF" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
@@ -6705,7 +6709,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <pinref part="U1" gate="A" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="116.84" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="119.38" x2="127" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="127" y1="119.38" x2="127" y2="111.76" width="0.1524" layer="91"/>
@@ -6893,7 +6897,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </segment>
 <segment>
 <wire x1="127" y1="104.14" x2="127" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="127" y1="93.98" x2="101.6" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <junction x="101.6" y="93.98"/>
@@ -7009,9 +7013,9 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 </net>
 <net name="N$29" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="104.14" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="106.68" x2="114.3" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="ADJ"/>
 <wire x1="101.6" y1="111.76" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
@@ -7025,6 +7029,7 @@ Source: http://www.onsemi.co.jp .. LM317M-D.PDF</description>
 <wire x1="86.36" y1="119.38" x2="93.98" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="X3" gate="-2" pin="KL"/>
 <wire x1="86.36" y1="119.38" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="IN"/>
 </segment>
 </net>
 </nets>

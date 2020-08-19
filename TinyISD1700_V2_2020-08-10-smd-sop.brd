@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
@@ -648,16 +649,23 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -835,26 +843,30 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="70K9898" x="28.07615" y="13.518975" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="35.69615" y="8.478975" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="C6" library="SparkFun2" package="0805" value="" x="26.1483375" y="20.76579375" smashed="yes" rot="R180">
+<element name="C6" library="SparkFun2" package="0805" value="0.1uF" x="26.1483375" y="20.76579375" smashed="yes" rot="R180">
 <attribute name="NAME" x="26.9103375" y="19.94029375" size="0.4064" layer="25" rot="R180"/>
 <attribute name="VALUE" x="27.1643375" y="22.16279375" size="0.4064" layer="27" rot="R180"/>
 </element>
-<element name="R1" library="SparkFun2" package="0805" value="" x="26.7023125" y="25.50895" smashed="yes" rot="R270">
+<element name="R2" library="SparkFun2" package="0805" value="340OHM" x="26.7023125" y="25.50895" smashed="yes" rot="R270">
 <attribute name="NAME" x="27.5278125" y="26.27095" size="0.4064" layer="25" rot="R270"/>
 <attribute name="VALUE" x="25.3053125" y="26.52495" size="0.4064" layer="27" rot="R270"/>
 </element>
-<element name="R2" library="SparkFun2" package="0805" value="" x="23.34449375" y="24.606784375" smashed="yes" rot="R180">
+<element name="R1" library="SparkFun2" package="0805" value="240OHM" x="23.34449375" y="24.606784375" smashed="yes" rot="R180">
 <attribute name="NAME" x="24.10649375" y="23.781284375" size="0.4064" layer="25" rot="R180"/>
 <attribute name="VALUE" x="24.36049375" y="26.003784375" size="0.4064" layer="27" rot="R180"/>
 </element>
-<element name="C5" library="SparkFun2" package="EIA3216" value="" x="22.410459375" y="18.071790625" smashed="yes" rot="R90">
+<element name="C5" library="SparkFun2" package="EIA3216" value="1uF" x="22.410459375" y="18.071790625" smashed="yes" rot="R90">
 <attribute name="NAME" x="21.029459375" y="15.531790625" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="21.078459375" y="18.479790625" size="0.4064" layer="27" rot="R90"/>
 </element>
-<element name="IC3" library="v-reg" package="DPACK" value="LM317MDT" x="34.94599375" y="22.287078125" rot="R270"/>
-<element name="U$1" library="arduino" package="8PIN_HEADER" value="8PIN_HEADER" x="8.050165625" y="1.192378125">
-<attribute name="MPN" value="YSDKS128E10" x="8.050165625" y="1.192378125" size="1.778" layer="27" display="off"/>
+<element name="IC3" library="v-reg" package="DPACK" value="LM317MDT" x="34.94599375" y="22.287078125" smashed="yes" rot="R270">
+<attribute name="NAME" x="32.40599375" y="26.097078125" size="1.27" layer="25"/>
+<attribute name="VALUE" x="32.40599375" y="17.207078125" size="1.27" layer="27"/>
+</element>
+<element name="U$1" library="arduino" package="8PIN_HEADER" value="8PIN_HEADER" x="8.050165625" y="1.192378125" smashed="yes">
 <attribute name="MF" value="RENESAS" x="8.050165625" y="1.192378125" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="YSDKS128E10" x="8.050165625" y="1.192378125" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="6.780165625" y="3.097378125" size="1.016" layer="25" font="vector"/>
 <attribute name="OC_FARNELL" value="2946736" x="8.050165625" y="1.192378125" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
@@ -888,7 +900,7 @@ design rules under a new name.</description>
 <wire x1="16.791440625" y1="27.921471875" x2="18.280278125" y2="27.797084375" width="0.1524" layer="1"/>
 <wire x1="22.29029375" y1="24.49384375" x2="18.4431375" y2="21.26916875" width="0.8128" layer="1"/>
 <wire x1="18.4431375" y1="21.26916875" x2="17.970440625" y2="20.796471875" width="0.8128" layer="1"/>
-<contactref element="R2" pad="2"/>
+<contactref element="R1" pad="2"/>
 <contactref element="C5" pad="A"/>
 <wire x1="22.44449375" y1="24.606784375" x2="22.390965625" y2="20.996465625" width="0.4064" layer="1"/>
 <wire x1="22.410459375" y1="19.471790625" x2="22.390965625" y2="20.996465625" width="0.4064" layer="1"/>
@@ -1073,7 +1085,7 @@ design rules under a new name.</description>
 </polygon>
 <wire x1="26.118425" y1="7.71196875" x2="27.1840875" y2="7.711965625" width="0.4064" layer="1"/>
 <wire x1="20.441440625" y1="36.771471875" x2="20.441440625" y2="31.561471875" width="0.4064" layer="1"/>
-<contactref element="R1" pad="1"/>
+<contactref element="R2" pad="1"/>
 <contactref element="C6" pad="2"/>
 <contactref element="C5" pad="C"/>
 <contactref element="X3" pad="1"/>
@@ -1251,8 +1263,8 @@ design rules under a new name.</description>
 <via x="20.435303125" y="29.015275" extent="1-16" drill="0.8" diameter="1.6764" shape="octagon"/>
 </signal>
 <signal name="N$29">
-<contactref element="R1" pad="2"/>
-<contactref element="R2" pad="1"/>
+<contactref element="R2" pad="2"/>
+<contactref element="R1" pad="1"/>
 <wire x1="24.24449375" y1="24.606784375" x2="25.2648625" y2="24.61429375" width="0.4064" layer="1"/>
 <wire x1="25.2648625" y1="24.61429375" x2="26.7023125" y2="24.60895" width="0.4064" layer="1"/>
 <wire x1="26.7023125" y1="24.60895" x2="28.741184375" y2="24.61429375" width="0.4064" layer="1"/>
@@ -1267,8 +1279,17 @@ design rules under a new name.</description>
 <wire x1="27.099721875" y1="20.76579375" x2="27.099721875" y2="16.069553125" width="0.4064" layer="1"/>
 <wire x1="27.099721875" y1="16.069553125" x2="29.34615" y2="16.069553125" width="0.4064" layer="1"/>
 <wire x1="29.34615" y1="16.069553125" x2="29.34615" y2="16.018975" width="0.4064" layer="1"/>
+<contactref element="IC3" pad="3"/>
+<wire x1="27.099721875" y1="20.76579375" x2="30.14599375" y2="20.007078125" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 </eagle>
