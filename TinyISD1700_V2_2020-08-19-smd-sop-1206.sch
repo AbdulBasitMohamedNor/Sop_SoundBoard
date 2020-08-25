@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6489,7 +6489,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <parts>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="80OHM" library="rcl" deviceset="R-US_" device="0204/2V">
+<part name="R_OSC" library="rcl" deviceset="R-US_" device="0204/2V" value="80kohm">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value=""/>
 <attribute name="OC_FARNELL" value="unknown"/>
@@ -6529,11 +6529,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="MPN" value=""/>
 <attribute name="OC_NEWARK" value="70K9898"/>
 </part>
-<part name="80OHM1" library="rcl" deviceset="R-US_" device="0204/2V" value="10Kohm">
-<attribute name="MF" value=""/>
-<attribute name="MPN" value=""/>
-<attribute name="OC_FARNELL" value="unknown"/>
-</part>
 <part name="C4" library="resistor" deviceset="C-US" device="050-030X075">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value=""/>
@@ -6548,8 +6543,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="MF" value="MICROCHIP"/>
 </part>
 <part name="C6" library="SparkFun2" deviceset="CAP" device="0805"/>
-<part name="R1" library="SparkFun" deviceset="RESISTOR" device="1206"/>
-<part name="R2" library="SparkFun" deviceset="RESISTOR" device="1206"/>
+<part name="R2." library="SparkFun" deviceset="RESISTOR" device=""/>
+<part name="R1" library="SparkFun" deviceset="RESISTOR" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="C5" library="SparkFun2" deviceset="CAP_POL" device="1206"/>
@@ -6559,6 +6554,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="MF" value="RENESAS"/>
 <attribute name="MPN" value="YSDKS128E10"/>
 <attribute name="OC_FARNELL" value="2946736"/>
+</part>
+<part name="R_SP+" library="rcl" deviceset="R-US_" device="0204/2V" value="80kohm">
+<attribute name="MF" value=""/>
+<attribute name="MPN" value=""/>
+<attribute name="OC_FARNELL" value="unknown"/>
 </part>
 </parts>
 <sheets>
@@ -6572,7 +6572,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="GND2" gate="1" x="165.1" y="12.7" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="167.64" y="10.16" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="80OHM" gate="G$1" x="99.06" y="38.1" smashed="yes">
+<instance part="R_OSC" gate="G$1" x="99.06" y="38.1" smashed="yes">
 <attribute name="OC_FARNELL" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MF" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
@@ -6620,12 +6620,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="MPN" x="81.28" y="40.64" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="86.36" y="27.178" size="1.27" layer="95" rot="R180"/>
 </instance>
-<instance part="X2" gate="-1" x="152.4" y="27.94" smashed="yes" rot="R90">
-<attribute name="NAME" x="151.511" y="27.94" size="1.778" layer="95" rot="R270"/>
+<instance part="X2" gate="-1" x="152.4" y="22.86" smashed="yes" rot="R90">
+<attribute name="NAME" x="151.511" y="22.86" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="X2" gate="-2" x="157.48" y="27.94" smashed="yes" rot="R90">
-<attribute name="VALUE" x="161.163" y="25.4" size="1.778" layer="96" rot="R90"/>
-<attribute name="NAME" x="156.591" y="27.94" size="1.778" layer="95" rot="R270"/>
+<instance part="X2" gate="-2" x="157.48" y="22.86" smashed="yes" rot="R90">
+<attribute name="VALUE" x="161.163" y="20.32" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="156.591" y="22.86" size="1.778" layer="95" rot="R270"/>
 </instance>
 <instance part="X3" gate="-1" x="40.64" y="111.76" smashed="yes" rot="MR180">
 <attribute name="NAME" x="40.64" y="110.871" size="1.778" layer="95" rot="MR0"/>
@@ -6633,12 +6633,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="X3" gate="-2" x="40.64" y="119.38" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="38.1" y="123.063" size="1.778" layer="96" rot="MR180"/>
 <attribute name="NAME" x="40.64" y="118.491" size="1.778" layer="95" rot="MR0"/>
-</instance>
-<instance part="80OHM1" gate="G$1" x="157.48" y="43.18" smashed="yes" rot="R90">
-<attribute name="VALUE" x="155.702" y="36.83" size="1.778" layer="96" rot="R90"/>
-<attribute name="OC_FARNELL" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
-<attribute name="MF" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="157.48" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C4" gate="G$1" x="142.24" y="38.1" smashed="yes">
 <attribute name="OC_FARNELL" x="142.24" y="38.1" size="1.778" layer="96" display="off"/>
@@ -6663,12 +6657,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="NAME" x="87.884" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="87.884" y="104.521" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="101.6" y="99.06" smashed="yes" rot="R90">
+<instance part="R2." gate="G$1" x="101.6" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.1014" y="95.25" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="104.902" y="95.25" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
-<attribute name="NAME" x="112.8014" y="107.95" size="1.778" layer="95" rot="R90"/>
+<instance part="R1" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="117.8814" y="113.03" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="117.602" y="107.95" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND3" gate="1" x="101.6" y="91.44" smashed="yes" rot="MR0">
@@ -6690,6 +6684,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="MF" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="MPN" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="NAME" x="126.238" y="27.94" size="1.27" layer="95" rot="MR270"/>
+</instance>
+<instance part="R_SP+" gate="G$1" x="157.48" y="40.64" smashed="yes" rot="R90">
+<attribute name="OC_FARNELL" x="157.48" y="40.64" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MF" x="157.48" y="40.64" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MPN" x="157.48" y="40.64" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="NAME" x="155.9814" y="36.83" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="160.782" y="36.83" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -6722,7 +6723,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <pinref part="U1" gate="A" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="116.84" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="119.38" x2="127" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="127" y1="119.38" x2="127" y2="111.76" width="0.1524" layer="91"/>
@@ -6813,7 +6814,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="N$6" class="0">
 <segment>
 <wire x1="137.16" y1="45.72" x2="152.4" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="45.72" x2="152.4" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="45.72" x2="152.4" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-1" pin="KL"/>
 <pinref part="U$4" gate="G$1" pin="SP-"/>
 </segment>
@@ -6821,8 +6822,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="N$7" class="0">
 <segment>
 <wire x1="137.16" y1="48.26" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="80OHM1" gate="G$1" pin="2"/>
 <pinref part="U$4" gate="G$1" pin="SP+"/>
+<pinref part="R_SP+" gate="G$1" pin="2"/>
+<wire x1="157.48" y1="48.26" x2="157.48" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -6845,7 +6847,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <wire x1="93.98" y1="33.02" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="33.02" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="80OHM" gate="G$1" pin="1"/>
+<pinref part="R_OSC" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="38.1" x2="91.44" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="38.1" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
 <junction x="91.44" y="33.02"/>
@@ -6915,7 +6917,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </segment>
 <segment>
 <wire x1="127" y1="104.14" x2="127" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R2." gate="G$1" pin="1"/>
 <wire x1="127" y1="93.98" x2="101.6" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <junction x="101.6" y="93.98"/>
@@ -6933,7 +6935,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="N$1" class="0">
 <segment>
 <wire x1="106.68" y1="35.56" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="80OHM" gate="G$1" pin="2"/>
+<pinref part="R_OSC" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="35.56" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="R_OSC"/>
 </segment>
@@ -7019,21 +7021,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <pinref part="U1" gate="A" pin="PD0"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="X2" gate="-2" pin="KL"/>
-<pinref part="80OHM1" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="38.1" x2="157.48" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="33.02" x2="157.48" y2="33.02" width="0.1524" layer="91"/>
-<junction x="157.48" y="33.02"/>
-</segment>
-</net>
 <net name="N$29" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R2." gate="G$1" pin="2"/>
 <wire x1="101.6" y1="104.14" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="106.68" x2="114.3" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="ADJ"/>
 <wire x1="101.6" y1="111.76" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
@@ -7048,6 +7040,17 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <pinref part="X3" gate="-2" pin="KL"/>
 <wire x1="86.36" y1="119.38" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="IN"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="X2" gate="-2" pin="KL"/>
+<wire x1="157.48" y1="33.02" x2="157.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="33.02" x2="142.24" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="R_SP+" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="35.56" x2="157.48" y2="33.02" width="0.1524" layer="91"/>
+<junction x="157.48" y="33.02"/>
 </segment>
 </net>
 </nets>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6569,8 +6569,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="GND1" gate="1" x="5.08" y="20.32" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="7.62" y="17.78" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="GND2" gate="1" x="165.1" y="20.32" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="167.64" y="17.78" size="1.778" layer="96" rot="MR0"/>
+<instance part="GND2" gate="1" x="165.1" y="7.62" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="167.64" y="5.08" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="80OHM" gate="G$1" x="99.06" y="38.1" smashed="yes">
 <attribute name="OC_FARNELL" x="99.06" y="38.1" size="1.778" layer="96" display="off"/>
@@ -6599,11 +6599,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="P+2" gate="VCC" x="12.7" y="48.26" smashed="yes">
 <attribute name="VALUE" x="10.16" y="45.72" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$2" gate="G$1" x="137.16" y="5.08" smashed="yes" rot="MR90">
-<attribute name="OC_FARNELL" x="137.16" y="5.08" size="1.778" layer="96" display="off"/>
-<attribute name="MF" x="137.16" y="5.08" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="137.16" y="5.08" size="1.778" layer="96" display="off"/>
-<attribute name="NAME" x="150.622" y="0" size="1.27" layer="95" rot="MR90"/>
+<instance part="U$2" gate="G$1" x="121.92" y="0" smashed="yes" rot="MR90">
+<attribute name="OC_FARNELL" x="121.92" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="MF" x="121.92" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="MPN" x="121.92" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="135.382" y="-5.08" size="1.27" layer="95" rot="MR90"/>
 </instance>
 <instance part="GND4" gate="1" x="91.44" y="20.32" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="93.98" y="17.78" size="1.778" layer="96" rot="MR0"/>
@@ -6685,11 +6685,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <attribute name="VALUE" x="55.88" y="114.3" size="1.778" layer="96" rot="MR270"/>
 </instance>
 <instance part="IC3" gate="G$1" x="101.6" y="119.38"/>
-<instance part="U$1" gate="G$1" x="139.7" y="22.86" smashed="yes" rot="MR270">
-<attribute name="OC_FARNELL" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MF" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MPN" x="139.7" y="22.86" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="NAME" x="126.238" y="27.94" size="1.27" layer="95" rot="MR270"/>
+<instance part="U$1" gate="G$1" x="124.46" y="17.78" smashed="yes" rot="MR270">
+<attribute name="OC_FARNELL" x="124.46" y="17.78" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="MF" x="124.46" y="17.78" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="MPN" x="124.46" y="17.78" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="NAME" x="110.998" y="22.86" size="1.27" layer="95" rot="MR270"/>
 </instance>
 </instances>
 <busses>
@@ -6855,46 +6855,46 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <wire x1="137.16" y1="55.88" x2="165.1" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="53.34" x2="165.1" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="53.34" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="22.86" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="10.16" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
 <junction x="165.1" y="60.96"/>
 <junction x="165.1" y="58.42"/>
 <junction x="165.1" y="55.88"/>
 <junction x="165.1" y="53.34"/>
-<junction x="165.1" y="22.86"/>
+<junction x="165.1" y="10.16"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="P$1"/>
-<wire x1="147.32" y1="12.7" x2="147.32" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="15.24" x2="165.1" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="7.62" x2="132.08" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="10.16" x2="165.1" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$2"/>
-<wire x1="144.78" y1="12.7" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="15.24" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="7.62" x2="129.54" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="10.16" x2="129.54" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$3"/>
-<wire x1="142.24" y1="12.7" x2="142.24" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="15.24" x2="142.24" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="127" y1="7.62" x2="127" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="10.16" x2="127" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$4"/>
-<wire x1="139.7" y1="12.7" x2="139.7" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="15.24" x2="139.7" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="7.62" x2="124.46" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="127" y1="10.16" x2="124.46" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$5"/>
-<wire x1="137.16" y1="12.7" x2="137.16" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="15.24" x2="137.16" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="7.62" x2="121.92" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="10.16" x2="121.92" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$6"/>
-<wire x1="134.62" y1="12.7" x2="134.62" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="15.24" x2="134.62" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="7.62" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="10.16" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$7"/>
-<wire x1="132.08" y1="12.7" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="15.24" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="7.62" x2="116.84" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="10.16" x2="116.84" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="P$8"/>
-<wire x1="129.54" y1="12.7" x2="129.54" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="15.24" x2="129.54" y2="15.24" width="0.1524" layer="91"/>
-<junction x="129.54" y="15.24"/>
-<junction x="132.08" y="15.24"/>
-<junction x="134.62" y="15.24"/>
-<junction x="137.16" y="15.24"/>
-<junction x="139.7" y="15.24"/>
-<junction x="142.24" y="15.24"/>
-<junction x="144.78" y="15.24"/>
-<junction x="147.32" y="15.24"/>
+<wire x1="114.3" y1="7.62" x2="114.3" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="10.16" x2="114.3" y2="10.16" width="0.1524" layer="91"/>
+<junction x="114.3" y="10.16"/>
+<junction x="116.84" y="10.16"/>
+<junction x="119.38" y="10.16"/>
+<junction x="121.92" y="10.16"/>
+<junction x="124.46" y="10.16"/>
+<junction x="127" y="10.16"/>
+<junction x="129.54" y="10.16"/>
+<junction x="132.08" y="10.16"/>
 <pinref part="U$4" gate="G$1" pin="VSSD"/>
 <pinref part="U$4" gate="G$1" pin="VSSA"/>
 <pinref part="U$4" gate="G$1" pin="VSSP1"/>
@@ -7042,6 +7042,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <wire x1="86.36" y1="119.38" x2="93.98" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="X3" gate="-2" pin="KL"/>
 <wire x1="86.36" y1="119.38" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="IN"/>
 </segment>
 </net>
 </nets>
