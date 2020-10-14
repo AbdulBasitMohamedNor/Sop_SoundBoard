@@ -1517,6 +1517,42 @@ design rules under a new name.</description>
 <signal name="N$38">
 <via x="28.993709375" y="4.068209375" extent="1-16" drill="1.1" diameter="0.8128"/>
 </signal>
+<signal name="N$19">
+<via x="29.01084375" y="4.03509375" extent="1-16" drill="0.000003125" diameter="1.4224"/>
+</signal>
+<signal name="N$36">
+<via x="31.5795125" y="4.07825" extent="1-16" drill="0.000003125" diameter="1.4224"/>
+</signal>
+<signal name="N$39">
+<via x="34.105009375" y="4.03509375" extent="1-16" drill="0.000003125" diameter="1.4224"/>
+</signal>
+<signal name="N$40">
+<via x="34.12659375" y="1.55361875" extent="1-16" drill="0.000003125" diameter="1.4224"/>
+</signal>
+<signal name="N$41">
+<via x="31.5795125" y="1.46730625" extent="1-16" drill="0.000003125" diameter="1.4224"/>
+</signal>
+<signal name="N$42">
+<via x="28.989259375" y="1.488884375" extent="1-16" drill="0.000003125" diameter="1.9304" shape="square"/>
+</signal>
+<signal name="N$43">
+<via x="6.2412625" y="42.65786875" extent="1-16" drill="0.000003125" diameter="1.9304" shape="square"/>
+</signal>
+<signal name="N$44">
+<via x="8.75935" y="42.65786875" extent="1-16" drill="0.000003125" diameter="1.9304"/>
+</signal>
+<signal name="N$45">
+<via x="11.277440625" y="42.65786875" extent="1-16" drill="0.000003125" diameter="1.9304"/>
+</signal>
+<signal name="N$46">
+<via x="13.813515625" y="42.675846875" extent="1-16" drill="0.000003125" diameter="1.9304"/>
+</signal>
+<signal name="N$47">
+<via x="16.349590625" y="42.65786875" extent="1-16" drill="0.000003125" diameter="1.9304"/>
+</signal>
+<signal name="N$48">
+<via x="3.6872" y="42.693821875" extent="1-16" drill="0.000003125" diameter="1.9304"/>
+</signal>
 </signals>
 </board>
 </drawing>
